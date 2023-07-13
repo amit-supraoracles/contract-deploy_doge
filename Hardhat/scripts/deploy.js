@@ -3,7 +3,7 @@ async function main() {
 
   console.log("\n\nDeploying contracts with the account:", deployer.address);
 
-  const token = await ethers.deployContract("SupraContract");
+  const token = await ethers.deployContract("SupraContract",[],{gasLimit:"2000000"});
 
   console.log("Supra Contract Address:", await token.getAddress());
 }
